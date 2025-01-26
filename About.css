@@ -1,0 +1,278 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Audiowide', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: linear-gradient(135deg, #012328, #025a5d, #1d1d1d);
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #012328, #025a5d, #1d1d1d);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    max-width: 60px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #21c945;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #21c945;
+    color: #121212;
+}
+
+/* Highlight Style */
+.highlight {
+    background-color: #f60a1a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(246, 10, 26, 0.5);
+}
+
+/* Main Styling */
+main {
+    padding: 30px;
+    background: linear-gradient(135deg, #012328, #025a5d, #1d1d1d);
+    min-height: 100vh;
+}
+
+.main-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #21c945;
+    animation: fadeIn 1s ease;
+}
+
+.main-intro p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Branches Section */
+.branches {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.branch img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.branch:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.branch p {
+    margin: 5px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Details Section */
+.details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.detail {
+    background-color: #1a1a1a;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 45px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.detail h3 {
+    margin-top: 0;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background: #0d0d0d;
+    border-top: 2px solid #21c945;
+    flex-wrap: wrap;
+}
+
+footer div {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer u {
+    font-size: 1.1rem;
+}
+
+footer img {
+    margin-top: 10px;
+    max-width: 50px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .branches, .details {
+        flex: none;
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-intro h1 {
+        font-size: 2rem;
+    }
+
+    .main-intro p {
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer div {
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .main-intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-intro p {
+        font-size: 0.9rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+}
